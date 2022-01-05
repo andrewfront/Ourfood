@@ -1,15 +1,27 @@
-// $title: #363838;
-// $default: #5A5A5A;
-// %title-font {
-//     font-family: 'Montserrat', sans-serif;
-//     font-weight: 700;
-// }
-
-
-// @function max($numbers...) {
-//     @return m#{a}x(#{$numbers});
-// }
-
-// @function min($numbers...) {
-//     @return m#{i}n(#{$numbers});
-// }
+$text: #858585;
+$title: #000000;
+$violet: #4832DC;
+$yellow: #FFAE00;
+$grey: #D3D3D3;
+$green: #37D679;
+$white: #ffffff;
+%lightp {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+%regularp {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+%mediump {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+%semiboldp {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+%boldp {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
