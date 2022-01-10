@@ -86,6 +86,55 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./app/js/modules/lazyload.js":
+/*!************************************!*\
+  !*** ./app/js/modules/lazyload.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const lazyLoad = () => {
+  const lazyImages = document.querySelectorAll('img[data-src]');
+  const windowHeight = document.documentElement.clientHeight;
+  let lazyImagesPositions = [];
+
+  if (lazyImages.length > 0) {
+    lazyImages.forEach(img => {
+      if (img.dataset.src) {
+        lazyImagesPositions.push(img.getBoundingClientRect().top + pageYOffset);
+        lazyScrollCheck();
+      }
+    });
+  }
+
+  window.addEventListener('scroll', lazyScroll);
+
+  function lazyScroll() {
+    if (document.querySelectorAll('img[data-src]').length > 0) {
+      lazyScrollCheck();
+    }
+  }
+
+  function lazyScrollCheck() {
+    let imgIndex = lazyImagesPositions.findIndex(item => pageYOffset > item - windowHeight);
+
+    if (imgIndex >= 0) {
+      if (lazyImages[imgIndex].dataset.src) {
+        lazyImages[imgIndex].src = lazyImages[imgIndex].dataset.src;
+        lazyImages[imgIndex].removeAttribute('data-src');
+      }
+
+      delete lazyImagesPositions[imgIndex];
+    }
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (lazyLoad);
+
+/***/ }),
+
 /***/ "./app/js/script.js":
 /*!**************************!*\
   !*** ./app/js/script.js ***!
@@ -97,9 +146,14 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var nodelist_foreach_polyfill__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! nodelist-foreach-polyfill */ "./node_modules/nodelist-foreach-polyfill/index.js");
 /* harmony import */ var nodelist_foreach_polyfill__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(nodelist_foreach_polyfill__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modules_lazyload__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/lazyload */ "./app/js/modules/lazyload.js");
 __webpack_require__(/*! es6-promise-polyfill */ "./node_modules/es6-promise-polyfill/promise.js");
 
 
+
+window.addEventListener('DOMContentLoaded', () => {
+  Object(_modules_lazyload__WEBPACK_IMPORTED_MODULE_1__["default"])();
+});
 
 /***/ }),
 
