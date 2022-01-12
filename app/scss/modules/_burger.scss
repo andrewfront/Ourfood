@@ -1,0 +1,130 @@
+/*  COLORS
+========================================= */
+
+/*  MIXINS
+========================================= */
+
+@mixin animation($animation) {
+  -webkit-animation: #{$animation};
+     -moz-animation: #{$animation};
+       -o-animation: #{$animation};
+          animation: #{$animation};
+}
+
+@mixin animation-delay($animation-delay) {
+  -webkit-transition-delay: #{$animation-delay};
+     -moz-transition-delay: #{$animation-delay};
+       -o-transition-delay: #{$animation-delay};
+          transition-delay: #{$animation-delay};
+}
+
+@mixin keyframes($keyframes) {
+  @-webkit-keyframes #{$keyframes} { @content; }
+     @-moz-keyframes #{$keyframes} { @content; }
+       @-o-keyframes #{$keyframes} { @content; }
+          @keyframes #{$keyframes} { @content; }
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+     -moz-transform: $transform;
+      -ms-transform: $transform;
+       -o-transform: $transform;
+          transform: $transform;
+}
+
+@mixin transition($transition...) {
+  -webkit-transition: #{$transition};
+     -moz-transition: #{$transition};
+       -o-transition: #{$transition};
+          transition: #{$transition};
+}
+
+@mixin transition-delay($transition-delay) {
+  -webkit-transition-delay: #{$transition-delay};
+     -moz-transition-delay: #{$transition-delay};
+       -o-transition-delay: #{$transition-delay};
+          transition-delay: #{$transition-delay};
+}
+/*  MENU ICON
+========================================= */
+
+.menu-icon {
+    display: none;
+  position: absolute;
+  top: 6%;
+  left: 80%;
+  @include transform(translate(-50%, -50%));
+  width: 40px;
+  height: 40px;
+    z-index: 1001;
+  .dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: $violet;
+    border-radius: 10px;
+    @include transform(translate(-50%, -50%));
+    @include transition(margin .4s ease .4s, width .4s ease);
+
+    &:nth-of-type(1) {
+      margin-top: -13px;
+      margin-left: -13px;
+      @include transform(translate(-50%, -50%) rotate(45deg));
+    }
+
+    &:nth-of-type(2) {
+      margin-top: -13px;
+      @include transform(translate(-50%, -50%) rotate(-45deg));
+    }
+
+    &:nth-of-type(3) {
+      margin-top: -13px;
+      margin-left: 13px;
+    }
+
+    &:nth-of-type(4) {
+      margin-left: -13px;
+    }
+
+    &:nth-of-type(5) {
+
+    }
+
+    &:nth-of-type(6) {
+      margin-left: 13px;
+    }
+
+    &:nth-of-type(7) {
+      margin-top: 13px;
+      margin-left: -13px;
+    }
+
+    &:nth-of-type(8) {
+      margin-top: 13px;
+    }
+
+    &:nth-of-type(9) {
+      margin-top: 13px;
+      margin-left: 13px;
+    }
+  }
+
+  &.clicked {
+    .dot {
+      @include transition(margin .4s ease, width .4s ease .4s);
+      margin-left: 0;
+      margin-top: 0;
+
+      &:nth-of-type(1) {
+        width: 50px;
+      }
+
+      &:nth-of-type(2) {
+        width: 50px;
+      }
+    }
+  }
+}

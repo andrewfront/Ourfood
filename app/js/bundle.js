@@ -86,6 +86,35 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./app/js/modules/burger.js":
+/*!**********************************!*\
+  !*** ./app/js/modules/burger.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const burger = () => {
+  const burgerBtn = document.querySelector('.menu-icon');
+  const asideBar = document.querySelector('.header__nav');
+  burgerBtn.addEventListener('click', () => {
+    burgerBtn.classList.toggle('clicked');
+
+    if (burgerBtn.classList.contains('clicked')) {
+      asideBar.classList.add('burger-active');
+      document.body.style.overflow = 'hidden';
+    } else {
+      asideBar.classList.remove('burger-active');
+      document.body.style.overflow = '';
+    }
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (burger);
+
+/***/ }),
+
 /***/ "./app/js/modules/lazyload.js":
 /*!************************************!*\
   !*** ./app/js/modules/lazyload.js ***!
@@ -159,7 +188,17 @@ const slider = () => {
     arrows: true,
     appendArrows: jquery__WEBPACK_IMPORTED_MODULE_0___default()('.header__button-container'),
     prevArrow: '<div class="header__slick-button-prev"><img src="images/header/arrowright.svg" alt="arrow"></div>',
-    nextArrow: '<div class="header__slick-button-next"><img src="images/header/arrowleft.svg" alt="arrow"></div>'
+    nextArrow: '<div class="header__slick-button-next"><img src="images/header/arrowleft.svg" alt="arrow"></div>',
+    responsive: [{
+      breakpoint: 481,
+      settings: {
+        slidesToShow: 1,
+        vertical: false
+      }
+    } // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+    ]
   });
 };
 
@@ -257,7 +296,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/slider */ "./app/js/modules/slider.js");
 /* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/tabs */ "./app/js/modules/tabs.js");
 /* harmony import */ var _modules_validation__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/validation */ "./app/js/modules/validation.js");
+/* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/burger */ "./app/js/modules/burger.js");
 __webpack_require__(/*! es6-promise-polyfill */ "./node_modules/es6-promise-polyfill/promise.js");
+
 
 
 
@@ -271,6 +312,7 @@ window.addEventListener('DOMContentLoaded', () => {
   Object(_modules_slider__WEBPACK_IMPORTED_MODULE_4__["default"])();
   Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_5__["default"])();
   Object(_modules_validation__WEBPACK_IMPORTED_MODULE_6__["default"])();
+  Object(_modules_burger__WEBPACK_IMPORTED_MODULE_7__["default"])();
 });
 
 /***/ }),
