@@ -25,3 +25,29 @@ body {
     margin: 0 auto;
     padding: 0 15px;
 }
+.global__title-settings {
+    margin-bottom: 99px;
+    max-width: 100%;
+    @media (max-width: 1211px) {
+        margin: 20px 0;
+    }
+}
+.global__image {
+    margin: 0 auto;
+}
+.global__title-content {
+    text-align: center;
+    margin-top: -40px;
+}
+.global__title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+    span {
+        color: $violet;
+    }
+}
+.global__text {
+    font-size: 20px;
+    line-height: 30px;
+}

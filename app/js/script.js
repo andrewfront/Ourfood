@@ -2,6 +2,7 @@ require ('es6-promise-polyfill');
 import 'nodelist-foreach-polyfill';
 import $ from "jquery";
 import jqueryValidate from 'jquery-validation';
+import inputmask from 'inputmask';
 import lazyLoad from './modules/lazyload';
 import slider from './modules/slider'
 import tabs from './modules/tabs'
