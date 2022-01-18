@@ -1,0 +1,26 @@
+.reviews {
+    margin-bottom: 200px;
+    &__slider {
+        width: 846px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__slide {
+        width: 110px;
+        height: 110px;
+    }
+    &__slide img {
+        width: 110px;
+        height: 110px;
+    }
+}
+.active__container {
+    height: 178px;
+}
+.active__slide {
+    transform: scale(1.5);
+    padding: 15px;
+    width: 178px;
+    height: 178px;
+}
