@@ -1,0 +1,60 @@
+.footer {
+background-image: url(../../images/footer/bg.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+&__inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+&__item {
+    padding: 45px 0 38px 0;
+}
+&__item-first {
+max-width: 316px;
+}
+&__item-second {
+    max-width: 166px;
+}
+&__item-third {
+    max-width: 110px;
+}
+&__item-fourth {
+    max-width: 110px;
+}
+&__item-fifth {
+
+}
+.logo__footer {
+    margin-bottom: 22px;
+}
+&__text {
+    color: $white;
+    font-size: 13px;
+    line-height: 19px;
+}
+&__title {
+    margin-bottom: 18px;
+    color: $white;
+    @extend %mediump;
+    font-size: 16px;
+    line-height: 24px;
+}
+&__item {
+    color: $white;
+    @extend %lightp;
+    font-size: 14px;
+    line-height: 31px;
+}
+&__link {
+    color: $white;
+    @extend %lightp;
+    font-size: 14px;
+    line-height: 31px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        color: $yellow;
+    }
+}
+}

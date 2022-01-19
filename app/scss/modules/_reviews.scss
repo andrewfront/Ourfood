@@ -1,26 +1,116 @@
 .reviews {
-    margin-bottom: 200px;
-    &__slider {
-        width: 846px;
+    margin-bottom: 91px;
+    &__inner {
+        position: relative;
+        margin-bottom: 8px;
+    }
+    &__items {
+
         margin: 0 auto;
+        max-width: 846px;
         display: flex;
+        align-items: center;
         justify-content: space-between;
     }
+    &__decorative {
+        position: absolute;
+        left: 0;
+        top: 89px;
+        width: 100%;
+        height: 301px;
+        z-index: -1;
+    }
+    .quote {
+        position: relative;
+        &::before {
+            display: block;
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 45px;
+            height: 45px;
+            background-color: $white;
+            border-radius: 50%;
+            background-image: url(../../images/reviews/quote.svg);
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+            background-position: center center;
+        }
+    }
+    &__slider {
+        margin-bottom: 38px;
+        text-align: center;
+    }
     &__slide {
-        width: 110px;
-        height: 110px;
+        margin: 0 auto;
+        max-width: 986px;
+        color: $white;
+        text-align: center;
     }
-    &__slide img {
-        width: 110px;
-        height: 110px;
+    &__text {
+        margin-bottom: 13px;
+        @extend %lightp;
+        font-size: 16px;
+        line-height: 26px;
+    }
+    &__name {
+        @extend %semiboldp;
+        font-size: 25px;
+        line-height: 37px;
+    }
+    &__button-container {
+        display: flex;
+        justify-content: space-around;
+        margin:  auto auto;
+        width: 137px;
+        height: 62px;
+        background-color: $white;
+        box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25098);
+        border-radius: 50px;
+        text-align: center;
+        // z-index: 1;
+    }
+        &__slider-prev__btn,
+        &__slider-next__btn {
+        position: relative;
+        margin-top: 5px;
+        width: 52px;
+        height: 52px;
+        border: none;
+        background-color: $violet;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+        &__slider-prev__btn svg,
+        &__slider-next__btn svg {
+        position: absolute;
+        fill: $white;
+        width: 11px;
+        height: 16px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+        .slick-disabled {
+        background-color: $grey;
+        fill: #5E5E5E;
+    }
+    .slick-disabled svg {
+        fill: #5E5E5E;
     }
 }
-.active__container {
-    height: 178px;
-}
-.active__slide {
-    transform: scale(1.5);
-    padding: 15px;
-    width: 178px;
-    height: 178px;
-}
+@media (max-width: 458px) {
+    .reviews__slider {
+        padding: 5px;
+    }
+    }
+    @media (max-width: 373px) {
+        .reviews__items {
+            display: none;
+        }
+        .reviews__decorative {
+            top: 0;
+        }
+        }

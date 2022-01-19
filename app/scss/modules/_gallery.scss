@@ -68,12 +68,18 @@
     }
 }
 @media (max-width: 477px) {
+    .gallery {
+        margin-bottom: 20px;
+    }
+    .gallery .first__container {
+        padding-bottom: 20px;
+    }
     .gallery__container {
 grid-template-columns: repeat(1, 1fr);
 grid-template-rows: repeat(1, 1fr);
-// img {
-//     width: 100%;
-// }
+img {
+    width: 100%;
+}
     }
     .gallery__image:first-child {
         grid-column: 1;
