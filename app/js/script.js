@@ -11,6 +11,7 @@ import validation from './modules/validation'
 import burger from './modules/burger'
 import counter from './modules/counter'
 import showContent from './modules/showContent'
+import scroll from './modules/scroll'
 window.addEventListener('DOMContentLoaded', () => {
     lazyLoad()
     slider()
@@ -19,4 +20,5 @@ window.addEventListener('DOMContentLoaded', () => {
     burger()
     counter()
     showContent()
+    scroll()
 })

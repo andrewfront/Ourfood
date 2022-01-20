@@ -222,6 +222,54 @@ const lazyLoad = () => {
 
 /***/ }),
 
+/***/ "./app/js/modules/scroll.js":
+/*!**********************************!*\
+  !*** ./app/js/modules/scroll.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const scroll = () => {
+  const menuLinks = document.querySelectorAll('[data-scroll]');
+
+  if (menuLinks.length > 0) {
+    menuLinks.forEach(link => {
+      link.addEventListener('click', menuLinkClick);
+    });
+  }
+
+  const headerLogo = document.querySelectorAll('.header__logo');
+  headerLogo.forEach(logo => {
+    logo.addEventListener('click', e => {
+      e.preventDefault();
+      window.scrollTo({
+        top: (0, 0),
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  function menuLinkClick(e) {
+    const menuLink = e.target;
+
+    if (menuLink.dataset.scroll && document.querySelector(menuLink.dataset.scroll)) {
+      const goToBlock = document.querySelector(menuLink.dataset.scroll);
+      const goToBlockValue = goToBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.header').offsetHeight;
+      window.scrollTo({
+        top: goToBlockValue,
+        behavior: 'smooth'
+      });
+      e.preventDefault();
+    }
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (scroll);
+
+/***/ }),
+
 /***/ "./app/js/modules/showContent.js":
 /*!***************************************!*\
   !*** ./app/js/modules/showContent.js ***!
@@ -403,7 +451,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/burger */ "./app/js/modules/burger.js");
 /* harmony import */ var _modules_counter__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/counter */ "./app/js/modules/counter.js");
 /* harmony import */ var _modules_showContent__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/showContent */ "./app/js/modules/showContent.js");
+/* harmony import */ var _modules_scroll__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/scroll */ "./app/js/modules/scroll.js");
 __webpack_require__(/*! es6-promise-polyfill */ "./node_modules/es6-promise-polyfill/promise.js");
+
 
 
 
@@ -425,6 +475,7 @@ window.addEventListener('DOMContentLoaded', () => {
   Object(_modules_burger__WEBPACK_IMPORTED_MODULE_9__["default"])();
   Object(_modules_counter__WEBPACK_IMPORTED_MODULE_10__["default"])();
   Object(_modules_showContent__WEBPACK_IMPORTED_MODULE_11__["default"])();
+  Object(_modules_scroll__WEBPACK_IMPORTED_MODULE_12__["default"])();
 });
 
 /***/ }),

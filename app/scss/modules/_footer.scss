@@ -57,4 +57,104 @@ max-width: 316px;
         color: $yellow;
     }
 }
+&__social-icons {
+    margin-bottom: 17px;
 }
+&__link-icon svg {
+    width: 40px;
+    height: 40px;
+    fill: $white;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        fill: $title;
+    }
+}
+&__link-icon svg:not(:last-child) {
+    margin-right: 13px;
+}
+&__contacts-title {
+    margin-bottom: 13px;
+    @extend %mediump;
+    font-size: 16px;
+    line-height: 24px;
+}
+&__contacts-container {
+    max-width: 52px;
+    display: contents;
+    align-items: center;
+    justify-content: space-between;
+}
+&__item-contacts {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: $yellow;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        background-color: $violet;
+    }
+}
+.footer-location {
+    &::before {
+        display: block;
+        content: '';
+        background-image: url(../../images/footer/location.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.footer-phone {
+    &::before {
+        display: block;
+        content: '';
+        background-image: url(../../images/footer/phone.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+}
+.copyright {
+    text-align: center;
+    color: $white;
+}
+@media (max-width: 1251px) {
+    .footer {
+        padding: 20px;
+        background: none;
+        background-color: #18104A;
+    }
+.footer__item {
+    padding: 0;
+}
+    }
+    @media (max-width: 902px) {
+        .footer__inner {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        }
+        @media (max-width: 765px) {
+            .footer__item {
+                margin-bottom: 20px;
+
+            }
+            }
+            @media (max-width: 466px) {
+                .footer__inner {
+                    justify-content: space-between;
+                }
+                }
