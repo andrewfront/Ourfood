@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+            <link rel="manifest" href="images/favicon/site.webmanifest">
+            <meta name="msapplication-TileColor" content="#da532c">
+            <meta name="theme-color" content="#ffffff">
+        <title>Our Food</title>
+        <link rel="stylesheet" href="css/style.min.css">
+    </head>
+<body>
+    <div class="wrapper">
+        <svg display="none" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="facebook">
+        <path
+            d="M40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 29.9826 7.31375 38.2566 16.875 39.757V25.7813H11.7969V20H16.875V15.5938C16.875 10.5813 19.8609 7.8125 24.4293 7.8125C26.6175 7.8125 28.9062 8.20313 28.9062 8.20313V13.125H26.3843C23.8998 13.125 23.125 14.6666 23.125 16.2483V20H28.6719L27.7852 25.7813H23.125V39.757C32.6863 38.2566 40 29.9826 40 20Z"
+            fill="#1877F2" />
+        <path
+            d="M27.7852 25.7812L28.6719 20H23.125V16.2483C23.125 14.6666 23.8998 13.125 26.3843 13.125H28.9062V8.20312C28.9062 8.20312 26.6174 7.8125 24.4293 7.8125C19.8609 7.8125 16.875 10.5813 16.875 15.5938V20H11.7969V25.7812H16.875V39.757C17.8932 39.9168 18.9369 40 20 40C21.0631 40 22.1067 39.9168 23.125 39.757V25.7812H27.7852Z" />
+    </symbol>
+</svg>
+<svg display="none" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="google">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z"
+            fill="#C62D2D" fill-opacity="0.91" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M18.6415 18.2452C19.2946 17.59 19.3517 16.6809 19.3517 16.1688C19.3517 14.1227 18.1294 10.9381 15.7695 10.9381C15.0303 10.9381 14.2344 11.308 13.779 11.8772C13.2959 12.4742 13.1533 13.2409 13.1533 13.9803C13.1533 15.8846 14.2622 19.0411 16.7072 19.0411C17.418 19.0409 18.1857 18.6995 18.6415 18.2452ZM17.8162 23.6463C17.5888 23.6173 17.4465 23.6173 17.1628 23.6173C16.9067 23.6173 15.3712 23.6744 14.1773 24.0729C13.552 24.3004 11.7325 24.982 11.7325 27.0008C11.7325 29.0192 13.694 30.4685 16.7361 30.4685C19.4656 30.4685 20.9151 29.1614 20.9151 27.399C20.9151 25.9486 19.9773 25.1817 17.8162 23.6463ZM26.1539 20.7692H23.0769V19.2308H26.1539V16.1538H27.6923V19.2308H30.7692V20.7692H27.6923V23.8462H26.1539V20.7692ZM19.835 11.0232C20.4885 11.5636 21.8534 12.7004 21.8534 14.8617C21.8534 16.9655 20.6593 17.9606 19.4656 18.8982C19.0961 19.2679 18.6691 19.6662 18.6691 20.2917C18.6691 20.9173 19.0961 21.2586 19.408 21.514L20.432 22.3095C21.6833 23.3612 22.8199 24.3285 22.8199 26.2906C22.8199 28.9623 20.2327 31.6635 15.3427 31.6635C11.221 31.6635 9.23077 29.7021 9.23077 27.5978C9.23077 26.5742 9.74267 25.1246 11.4206 24.1292C13.1827 23.0487 15.5714 22.9077 16.85 22.8216C16.4519 22.3095 15.9972 21.7688 15.9972 20.8885C15.9972 20.4051 16.1394 20.1203 16.2816 19.7794C15.9682 19.8076 15.6563 19.8367 15.3714 19.8367C12.3584 19.8367 10.6526 17.5898 10.6526 15.3729C10.6526 14.0658 11.2494 12.6149 12.4719 11.5632C14.0926 10.2275 16.0255 10 17.5606 10H23.4169L21.5974 11.0227H19.835V11.0232Z" />
+    </symbol>
+</svg>
+<svg display="none" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="twitter">
+        <path d="M20 0C31.044 0 40 8.956 40 20C40 31.044 31.044 40 20 40C8.956 40 0 31.044 0 20C0 8.956 8.956 0 20 0Z"
+            fill="#1DA1F2" />
+        <path
+            d="M15.36 30.16C24.792 30.16 29.956 22.344 29.956 15.564C29.956 15.344 29.956 15.12 29.94 14.9C30.944 14.172 31.812 13.276 32.5 12.244C31.564 12.66 30.572 12.932 29.556 13.052C30.628 12.412 31.428 11.404 31.812 10.216C30.804 10.812 29.704 11.236 28.556 11.46C26.612 9.39601 23.364 9.29601 21.3 11.236C19.968 12.488 19.404 14.356 19.816 16.136C15.692 15.928 11.848 13.98 9.244 10.776C7.884 13.12 8.57599 16.116 10.832 17.624C10.016 17.6 9.216 17.38 8.504 16.984C8.504 17.004 8.504 17.028 8.504 17.048C8.504 19.488 10.224 21.592 12.62 22.076C11.864 22.28 11.072 22.312 10.304 22.164C10.976 24.252 12.9 25.684 15.096 25.728C13.28 27.156 11.036 27.932 8.728 27.928C8.32 27.928 7.912 27.904 7.508 27.852C9.84399 29.36 12.576 30.16 15.36 30.156" />
+    </symbol>
+</svg>
+<svg display="none" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="phone">
+    <path d="M40 20C40 31.0455 31.0459 40 20 40C8.9545 40 0 31.0459 0 20C0 8.9545 8.95414 0 20 0C31.0455 0 40 8.95414 40 20Z" fill="#4832DC"/>
+    <path d="M16.1547 5.36914C16.1547 5.36914 9.88037 5.45061 9.96172 11.0633C10.0434 16.6762 11.1843 21.6388 13.0585 24.4046C14.9324 27.1706 19.7395 34.4104 25.1994 33.6786C25.1994 33.6786 27.8886 33.1088 29.9252 31.807L23.3252 26.682C23.3252 26.682 21.3697 27.9024 20.1474 26.2753C18.9249 24.6487 15.0954 17.0833 15.0954 17.0833C15.0954 17.0833 14.0361 14.6426 16.3993 13.5852L16.1547 5.36914V5.36914Z" fill="white"/>
+    <path d="M16.8882 5.36914C16.8882 5.36914 17.3771 5.20705 18.2731 5.69473C19.1694 6.18271 19.1694 6.58892 19.1694 6.58892L19.2511 12.2024C19.2511 12.2024 19.0064 12.528 18.6808 12.8528C18.3548 13.1781 17.2955 13.6666 17.1322 13.341C16.9698 13.016 16.8882 5.36914 16.8882 5.36914V5.36914Z" fill="white"/>
+    <path d="M23.8739 26.0822L25.6883 25.1363C25.6883 25.1363 26.0956 25.0554 26.7473 25.4616C27.3993 25.8693 30.8217 28.5538 30.8217 28.5538C30.8217 28.5538 31.392 29.0418 31.229 29.6112C31.0663 30.1807 30.6587 31.401 30.6587 31.401L23.8739 26.0822V26.0822Z" fill="white"/>
+</symbol>
+</svg>
+<svg display="none" width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="prevArrow">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.90702 16.4948C8.16428 16.2146 8.16432 15.7602 7.90698 15.4799L1.78442 8.81069L7.90702 2.14117C8.16428 1.86094 8.16432 1.4065 7.90698 1.12622C7.64968 0.845946 7.23254 0.845946 6.97524 1.12622L0.386787 8.30324C0.263232 8.43783 0.193834 8.62036 0.193834 8.81069C0.193834 9.00102 0.263276 9.1836 0.386831 9.31814L6.97528 16.4948C7.23254 16.7751 7.64972 16.7751 7.90702 16.4948Z"/>
+</symbol>
+</svg>
+<svg display="none" width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="nextArrow">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.13436 16.4367C0.877103 16.1565 0.877059 15.702 1.1344 15.4218L7.25696 8.75258L1.13436 2.08307C0.877103 1.80283 0.877059 1.3484 1.1344 1.06812C1.3917 0.78784 1.80884 0.78784 2.06614 1.06812L8.65459 8.24513C8.77815 8.37972 8.84755 8.56225 8.84755 8.75258C8.84755 8.94291 8.77811 9.12549 8.65455 9.26003L2.0661 16.4367C1.80884 16.717 1.39166 16.717 1.13436 16.4367Z"/>
+</symbol>
+</svg>
+<svg display="none" width="18" height="23" viewBox="0 0 18 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="footer__location">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.4844 22.2437C9.38302 22.2437 9.28164 22.2437 9.18026 22.2437C9.0149 22.1093 8.81328 22.0022 8.68969 21.8366C6.65042 19.1062 4.62027 16.3689 2.58963 13.632C1.19357 11.7503 0.615959 9.65089 0.926786 7.32001C1.14068 5.71598 1.77417 4.28924 2.81135 3.05348C4.03027 1.60105 5.5698 0.646959 7.42325 0.222477C7.85832 0.122832 8.30469 0.0725485 8.74584 -0.000488281C9.12243 -0.000488281 9.4989 -0.000488281 9.87544 -0.000488281C9.93137 0.0117839 9.9867 0.0303012 10.0433 0.0354053C11.2105 0.139938 12.3226 0.450221 13.3395 1.02849C15.8857 2.47641 17.3824 4.66131 17.7251 7.57377C17.9797 9.73728 17.4268 11.7255 16.1339 13.483C14.0939 16.2563 12.0349 19.0158 9.97693 21.7758C9.84345 21.9547 9.64997 22.0888 9.4844 22.2437ZM13.8762 8.48369C13.8865 5.97497 11.8517 3.92413 9.33418 3.9054C6.81982 3.88672 4.75519 5.93501 4.74503 8.45827C4.73488 10.9669 6.76953 13.0178 9.2871 13.0366C11.8015 13.0552 13.866 11.007 13.8762 8.48369Z"/>
+</symbol>
+</svg>
+<svg display="none" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="footer__phone">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9739 11.3923C13.5121 11.0789 12.9054 11.0805 12.4453 11.3963L11.7828 11.851C11.0449 12.3574 10.0636 12.3299 9.35433 11.7841C8.68587 11.2695 8.04785 10.7179 7.44196 10.1333C6.85732 9.52742 6.30572 8.88945 5.79121 8.22093C5.2453 7.51172 5.21785 6.53039 5.7243 5.79242L6.17899 5.12994C6.49474 4.66983 6.49637 4.06315 6.183 3.60135L4.28664 0.806697C3.76277 0.0347366 2.74311 -0.223899 1.91596 0.20763L1.91545 0.207856C0.244639 1.07959 -0.456349 3.09535 0.309185 4.81741C1.41109 7.29638 2.89064 9.56384 4.67623 11.5495L6.02572 12.899C8.01148 14.6846 10.2789 16.1642 12.7579 17.2661C14.48 18.0316 16.4957 17.3306 17.3674 15.6598L17.3676 15.6593C17.7992 14.8322 17.5406 13.8125 16.7686 13.2886L13.9739 11.3923V11.3923Z"/>
+</symbol>
+</svg>
+<header class="header" id="home">
+    <div class="header__inner">
+        <aside class="header__nav">
+            <a href="#" class="header__logo"><img src="images/logo.png" alt="logo"></a>
+            <nav class="header__sidebar">
+                <a data-scroll="#home" href="#" class="header__link">Home</a>
+                <a data-scroll="#about" href="#" class="header__link">About</a>
+                <a data-scroll="#contact" href="#" class="header__link">Contact</a>
+                <a data-scroll="#services" href="#" class="header__link">Services</a>
+                <a data-scroll="#gallery" href="#" class="header__link">Gallery</a>
+                <a data-scroll="#help" href="#" class="header__link">Help</a>
+            </nav>
+            <div class="header__social">
+                <a href="#" class="header__facebook"><svg>
+                        <use xlink:href="#facebook"></use>
+                    </svg></a>
+                <a href="#" class="header__google"><svg>
+                        <use xlink:href="#google"></use>
+                    </svg></a>
+                <a href="#" class="header__twitter"><svg>
+                        <use xlink:href="#twitter"></use>
+                    </svg></a>
+            </div>
+        </aside>
+        <div class="header__slider">
+            <div class="header__slick">
+                <div class="header__slick-slide">
+                    <img data-src="images/header/slide1.jpg" src="images/plug.svg" alt="slide">
+
+                </div>
+                <div class="header__slick-slide">
+                    <img data-src="images/header/slide2.jpg" src="images/plug.svg" alt="slide">
+                </div>
+                <div class="header__slick-slide">
+                    <img data-src="images/header/slide3.jpg" src="images/plug.svg" alt="slide">
+                </div>
+            </div>
+            <div class="header__decor">Fast & Safe Delivery</div>
+            <div class="header__button-container"></div>
+        </div>
+        <div class="header__info">
+            <div class="menu-icon">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+            <a href="tel:+10000000" class="header__info-phone"><svg>
+                <use xlink:href="#phone"></use>
+            </svg></a>
+
+            <h1 class="header__info-title">We Provide Best Courier &
+                Parcel Service</h1>
+                <div class="header__tabcontainer">
+                <div class="header__tabitems">
+                    <div class="header__btn-item header__btn-item-active">Domestic</div>
+                    <div class="header__btn-item">International </div>
+                    <div class="header__btn-item">Vehicles</div>
+                </div>
+                <div class="header__tabcontent">
+                    <img data-src="images/header/tab1.jpg" src="images/plug.svg" alt="tabs">
+                    <img data-src="images/header/tab2.jpg" src="images/plug.svg" alt="tabs">
+                </div>
+                <div class="header__tabcontent hide">
+                    <img data-src="images/header/tab3.jpg" src="images/plug.svg" alt="tabs">
+                    <img data-src="images/header/tab4.jpg" src="images/plug.svg" alt="tabs">
+                </div>
+                <div class="header__tabcontent hide">
+                    <img data-src="images/header/tab5.jpg" src="images/plug.svg" alt="tabs">
+                    <img data-src="images/header/tab6.jpg" src="images/plug.svg" alt="tabs">
+                </div>
+            </div>
+            <form class="header__form">
+                <label class="header__form-label">
+                <input class="header__input" type="email" name="delivery" placeholder="Enter your email" required>
+            </label>
+                <button class="header__submit-btn" type="submit">SUBSCRIBE</button>
+            </form>
+            <div class="header__track">Track Your Order</div>
+        </div>
+    </div>
+</header>
+        <main class="main">
+            <div class="about" id="about">
+    <div class="container">
+        <div class="global__title-settings">
+            <img src="images/about/decor.png" alt="image" class="global__image">
+            <div class="global__title-content">
+            <h3 class="global__title"><span>ABOUT</span> US</h3>
+            <p class="global__text">Lorem Ipsum is simply dummy text</p>
+        </div>
+        </div>
+        <div class="about__inner">
+            <div class="about__img"><img src="images/about/img1.png" alt="about"></div>
+            <div class="about__content">
+                <p class="about__text-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <div class="about__items">
+                    <div class="about__item">
+                        <img src="images/about/item1.png" alt="about" class="about__img">
+                        <h4 class="about__title">FAST DELIVERY</h4>
+                        <p class="about__text">Lorem Ipsum is simply dummy
+                            text of the printing</p>
+                    </div>
+                    <div class="about__item">
+                        <img src="images/about/item2.png" alt="about" class="about__img">
+                        <h4 class="about__title">SECURED SERVICE</h4>
+                        <p class="about__text">Lorem Ipsum is simply dummy
+                            text of the printing</p>
+                    </div>
+                    <div class="about__item">
+                        <img src="images/about/item3.png" alt="about" class="about__img">
+                        <h4 class="about__title">WORLDWIDE SHIPPING</h4>
+                        <p class="about__text">Lorem Ipsum is simply dummy
+                            text of the printing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="order" id="contact">
+    <video class="order__video" autoplay muted loop>
+        <source src="images/order/video1.mp4" type="video/mp4">
+      </video>
+      <form class="order__form">
+        <div class="order__title">MAKE YOUR ORDER TODAY</div>
+        <label class="order__form-label">
+          <input class="order__name" type="text" name="name" placeholder="Enter your name" required>
+        </label>
+        <label class="order__form-label">
+          <input class="order__phone" type="tel" name="phone" placeholder="Enter your phone number" required>
+        </label>
+        <label class="order__form-label">
+          <input class="order__email" type="email" name="email" placeholder="Enter your email" required>
+        </label>
+        <button class="order__submit" type="submit">SUBMIT</button>
+      </form>
+</div>
+            <div class="services" id="services">
+<div class="container">
+    <div class="global__title-settings">
+        <img src="images/services/decor.png" alt="image" class="global__image">
+        <div class="global__title-content global__title-content--edit">
+        <h3 class="global__title"><span>Our</span> Services</h3>
+        <p class="global__text">Lorem Ipsum is simply dummy text</p>
+    </div>
+    <p class="services__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+    </div>
+    <div class="services__inner">
+        <div class="services__item">
+            <div class="services__img"><img src="images/services/img1.svg" alt="services"></div>
+            <div class="services__content">
+                <h5 class="services__title">Courier</h5>
+                <p class="services__text">Lorem Ipsum is simply dummy text of the printing...</p>
+            </div>
+        </div>
+        <div class="services__item">
+            <div class="services__img"><img src="images/services/img2.svg" alt="services"></div>
+            <div class="services__content">
+                <h5 class="services__title">RESIDENTIAL MOVERS</h5>
+                <p class="services__text">Lorem Ipsum is simply dummy text of the printing...</p>
+            </div>
+        </div>
+        <div class="services__item">
+            <div class="services__img"><img src="images/services/img3.svg" alt="services"></div>
+            <div class="services__content">
+                <h5 class="services__title">PACKAGING</h5>
+                <p class="services__text">Lorem Ipsum is simply dummy text of the printing...</p>
+            </div>
+        </div>
+        <div class="services__item">
+            <div class="services__img"><img src="images/services/img4.svg" alt="services"></div>
+            <div class="services__content">
+                <h5 class="services__title">COMMERCIAL MOVERS</h5>
+                <p class="services__text">Lorem Ipsum is simply dummy text of the printing...</p>
+            </div>
+        </div>
+        <div class="services__item">
+            <div class="services__img"><img src="images/services/img5.svg" alt="services"></div>
+            <div class="services__content">
+                <h5 class="services__title">Storage</h5>
+                <p class="services__text">Lorem Ipsum is simply dummy text of the printing...</p>
+            </div>
+        </div>
+        <div class="services__item">
+            <div class="services__img"><img src="images/services/img6.svg" alt="services"></div>
+            <div class="services__content">
+                <h5 class="services__title">INternational</h5>
+                <p class="services__text">Lorem Ipsum is simply dummy text of the printing...</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+            <div class="works">
+<div class="works__inner">
+    <div class="works__bg"><img src="images/works/img1.png" alt="works">
+    </div>
+    <div class="works__content">
+        <div class="works__info">
+            <h3 class="global__title works__title"><span>How</span> it works?</h3>
+            <p class="global__text works__subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+        </div>
+        <div class="works__items">
+            <div class="works__item works__item-violet">
+            <div class="works__decor"><span data-target="75" class="counter__number"></span></div>
+            <h5 class="works__name">ORDER</h5>
+            <p class="works__subname">Lorem Ipsum is simply dummy text</p>
+        </div>
+        <div class="works__item works__item-green">
+            <div class="works__decor"><span data-target="99" class="counter__number"></span></div>
+            <h5 class="works__name">ProcessingR</h5>
+            <p class="works__subname">Lorem Ipsum is simply dummy text</p>
+        </div>
+        <div class="works__item works__item-yellow">
+            <div class="works__decor"><span data-target="40" class="counter__number"></span></div>
+            <h5 class="works__name">Delivered</h5>
+            <p class="works__subname">Lorem Ipsum is simply dummy text</p>
+        </div>
+        </div>
+    </div>
+</div>
+</div>
+            <div class="gallery" id="gallery">
+    <div class="container bg__container">
+        <div class="global__title-settings">
+            <img src="images/gallery/title.png" alt="image" class="global__image">
+            <div class="global__title-content global__title-content--edit">
+            <h3 class="global__title"><span>Gallery</span> </h3>
+            <p class="global__text">Lorem Ipsum is simply dummy text</p>
+        </div>
+        </div>
+        <div class="gallery__container first__container">
+            <a data-fslightbox="instagram" data-type="image"  href="images/gallery/img1.jpg" class="gallery__image"><img data-src="images/gallery/img1.jpg" src="images/plug.svg" alt="gallery"></a>
+            <a data-fslightbox="instagram" data-type="image"  href="images/gallery/img2.jpg" class="gallery__image"><img data-src="images/gallery/img2.jpg" src="images/plug.svg" alt="gallery"></a>
+            <a data-fslightbox="instagram" data-type="image"  href="images/gallery/img3.jpg" class="gallery__image"><img data-src="images/gallery/img3.jpg" src="images/plug.svg" alt="gallery"></a>
+            <a data-fslightbox="instagram" data-type="image"  href="images/gallery/img4.jpg" class="gallery__image"><img data-src="images/gallery/img4.jpg" src="images/plug.svg" alt="gallery"></a>
+            <a data-fslightbox="instagram" data-type="image"  href="images/gallery/img5.jpg" class="gallery__image"><img data-src="images/gallery/img5.jpg" src="images/plug.svg" alt="gallery"></a>
+        </div>
+        <div class="gallery__container second__container hide__container">
+            <a data-fslightbox="instagram" data-type="image"  href="images/gallery/img6.jpg" class="gallery__image"><img data-src="images/gallery/img6.jpg" src="images/plug.svg" alt="gallery"></a>
+            <a data-fslightbox="instagram" data-type="image"  href="images/gallery/img7.jpg" class="gallery__image"><img data-src="images/gallery/img7.jpg" src="images/plug.svg" alt="gallery"></a>
+            <a data-fslightbox="instagram" data-type="image"  href="images/gallery/img8.jpg" class="gallery__image"><img data-src="images/gallery/img8.jpg" src="images/plug.svg" alt="gallery"></a>
+            <a data-fslightbox="instagram" data-type="image"  href="images/gallery/img9.jpg" class="gallery__image"><img data-src="images/gallery/img9.jpg" src="images/plug.svg" alt="gallery"></a>
+            <a data-fslightbox="instagram" data-type="image"  href="images/gallery/img10.jpg" class="gallery__image"><img data-src="images/gallery/img10.jpg" src="images/plug.svg" alt="gallery"></a>
+        </div>
+        <div class="gallery__btn-container">
+            <button class="gallery__btn">view all gallery</button>
+        </div>
+    </div>
+</div>
+            <div class="reviews">
+    <div class="container">
+        <div class="reviews__inner">
+            <img src="images/reviews/reviewsbg.jpg" alt="decorative" class="reviews__decorative">
+            <div class="reviews__items">
+                <div class="reviews__item"><img data-src="images/reviews/img1.png" src="images/plug.svg" alt="reviews"></div>
+                <div class="reviews__item"><img data-src="images/reviews/img2.png" src="images/plug.svg" alt="reviews"></div>
+                <div class="reviews__item quote"><img data-src="images/reviews/img3.png" src="images/plug.svg" alt="reviews"></div>
+                <div class="reviews__item"><img data-src="images/reviews/img4.png" src="images/plug.svg" alt="reviews"></div>
+                <div class="reviews__item"><img data-src="images/reviews/img5.png" src="images/plug.svg" alt="reviews"></div>
+            </div>
+    </div>
+    <div class="reviews__slider">
+        <div class="reviews__slide">
+            <p class="reviews__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal</p>
+            <h6 class="reviews__name">Abigail Irene</h6>
+        </div>
+        <div class="reviews__slide">
+            <p class="reviews__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal</p>
+            <h6 class="reviews__name">Abigail Irene</h6>
+        </div>
+        <div class="reviews__slide">
+            <p class="reviews__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal</p>
+            <h6 class="reviews__name">Abigail Irene</h6>
+        </div>
+        <div class="reviews__slide">
+            <p class="reviews__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal</p>
+            <h6 class="reviews__name">Abigail Irene</h6>
+        </div>
+        <div class="reviews__slide">
+            <p class="reviews__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal</p>
+            <h6 class="reviews__name">Abigail Irene</h6>
+        </div>
+    </div>
+    <div class="reviews__button-container"></div>
+        </div>
+</div>
+        </main>
+        <footer class="footer" id="help">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__item footer__item-first">
+                <ul class="footer__list">
+                    <li class="footer__item-logo logo__footer"><a href="" class="header__logo"><img src="images/footer/footerlogo.png" alt="logo"></a></li>
+                    <li class="footer__item-info"><p class="footer__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p></li>
+                </ul>
+            </div>
+            <div class="footer__item footer__item-second">
+                <h6 class="footer__title">ABOUT</h6>
+                <ul class="footer__list">
+                    <li class="footer__item-info"><a href="#" class="footer__link">Contact Us</a></li>
+                    <li class="footer__item-info"><a href="#" class="footer__link">About Us</a></li>
+                    <li class="footer__item-info"><a href="#" class="footer__link">Careers</a></li>
+                    <li class="footer__item-info"><a href="#" class="footer__link">Corporate Information</a></li>
+                </ul>
+            </div>
+            <div class="footer__item footer__item-third">
+                <h6 class="footer__title">HELP</h6>
+                <ul class="footer__list">
+                    <li class="footer__item-info"><a href="#" class="footer__link">Payments</a></li>
+                    <li class="footer__item-info"><a href="#" class="footer__link">Shipping</a></li>
+                    <li class="footer__item-info"><a href="#" class="footer__link">FAQ</a></li>
+                    <li class="footer__item-info"><a href="#" class="footer__link">Report</a></li>
+                </ul>
+            </div>
+            <div class="footer__item footer__item-fourth">
+                <h6 class="footer__title">POLICY</h6>
+                <ul class="footer__list">
+                    <li class="footer__item-info"><a href="#" class="footer__link">Terms Of Use</a></li>
+                    <li class="footer__item-info"><a href="#" class="footer__link">Security</a></li>
+                    <li class="footer__item-info"><a href="#" class="footer__link">Privacy</a></li>
+                    <li class="footer__item-info"><a href="#" class="footer__link">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="footer__item footer__item-fifth">
+                <h6 class="footer__title">Social</h6>
+                <div class="footer__social-icons">
+                    <a href="https://www.facebook.com/" class="footer__link-icon"><svg><use xlink:href="#facebook"></use></svg></a>
+                    <a href="https://www.google.ru/" class="footer__link-icon"><svg><use xlink:href="#google"></use></svg></a>
+                    <a href="https://twitter.com/?lang=ru" class="footer__link-icon"><svg><use xlink:href="#twitter"></use></svg></a>
+                </div>
+                <div class="footer__contacts">
+                    <h6 class="footer__contacts-title">Contact US</h6>
+                    <div class="footer__contacts-container">
+                    <a href="https://www.google.ru/maps/place/%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA,+%D0%A1%D0%A8%D0%90/@40.6971494,-74.259861,10z/data=!3m1!4b1!4m5!3m4!1s0x89c24fa5d33f083b:0xc80b8f06e177fe62!8m2!3d40.7127753!4d-74.0059728?hl=ru" class="footer__item-contacts footer-location"></a>
+                    <a href="tel:+10000000000" class="footer__item-contacts footer-phone"></a>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="copyright__name">made by | andrew Thanks for watching <span>&#128519;</span></div>
+        </div>
+    </div>
+</footer>
+    </div>
+    <script src="js/bundle.js"></script>
+</body>
+
+</html>
