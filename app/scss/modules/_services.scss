@@ -30,8 +30,22 @@
 
     &__img {
         margin-right: 29px;
+        animation: pulsate-bck 1s ease-in-out infinite both;
     }
-
+    @keyframes pulsate-bck {
+        0% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+        }
+        50% {
+          -webkit-transform: scale(0.9);
+                  transform: scale(0.9);
+        }
+        100% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+        }
+      }
     &__title {
         font-weight: 600;
         font-size: 18px;
